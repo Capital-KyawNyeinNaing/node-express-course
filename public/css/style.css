@@ -515,10 +515,6 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(204 204 204 / var(--tw-bg-opacity));
 }
-.text-red-50 {
-  --tw-text-opacity: 1;
-  color: rgb(254 242 242 / var(--tw-text-opacity));
-}
 .text-gray {
   --tw-text-opacity: 1;
   color: rgb(204 204 204 / var(--tw-text-opacity));
