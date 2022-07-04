@@ -3,8 +3,9 @@ const path = require("path");
 const app = express();
 const dotenv = require("dotenv");
 const logger = require("./middleware/logger");
-const apiRoutes = require("./routes/api/members");
 const sassConfig = require("./configs/scssConfig");
+const memberApiRoutes = require("./routes/api.routes");
+const globalErrHandler = require("./controller/error.controller");
 
 dotenv.config();
 
@@ -27,9 +28,11 @@ app.get("/", (req, res) =>
   })
 );
 
-app.use("/api/member", apiRoutes);
+app.use("/api", memberApiRoutes);
 
 app.use(logger);
+
+app.use(globalErrHandler);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));

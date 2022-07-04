@@ -1,9 +1,9 @@
-const members = [
-  {
-    id: 1,
-    name: "Member Name",
-    email: "member@gmail.com",
-  },
-];
+class Member {
+  constructor(id, name, email) {
+    this.id = id;
+    this.name = name;
+    this.email = email;
+  }
+}
 
-module.exports = members;
+module.exports = Member;
